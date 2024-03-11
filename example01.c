@@ -1,8 +1,11 @@
+###infinite loop####
+###숫자키입력 및 화면출력(q인터럽트)###
+
 #include <stdio.h>
 
 void number_to_word(int c){
 	switch (c) {
-	case '0':                         //label integer��
+	case '0':                         //label integer만
 		printf("%c: Zero\n", c);
 		break;
 	case '1':
@@ -37,7 +40,7 @@ void number_to_word(int c){
 */	
 	
 	default:
-		printf("���ڸ� �Է��ϼ���.\n");
+		printf("숫자를 입력하세요.\n");
 	
 	}
 }
@@ -47,11 +50,11 @@ int main()
 	int running = 1;     //int running; runnung=1;
 	
 	while(running){
-	printf("���� Ű�� �Է��ϼ���. �ش��ϴ� ���ܾ �˷��帮�ڽ��ϴ�. \n");
-	printf("Program�� �����÷��� q�� �Է��Ͻÿ�.. \n\n");
+	printf("숫자 키를 입력하세요. 해당하는 영단어를 알려드리겠습니다. \n");
+	printf("Program을 끝내시려면 q를 입력하시오.. \n\n");
 	printf(">");                            //<- echo
-	char c = getch();                       //no echo : Ű���� ������� �ʰ� ��ȯ  <- Ű���忡�� ���ڴ����� �ܼ�â�� ���ڰ� �ȶ�
-	//char c1 = getchar();                  // [enter]�ʿ�.
+	char c = getch();                       //no echo : 키값을 출력하지 않고 반환  <- 키보드에서 숫자눌러도 콘솔창에 숫자가 안뜸
+	//char c1 = getchar();                  // [enter]필요.
 	
 	if(c == 'q'){
 		running = 0;
@@ -60,10 +63,16 @@ int main()
 	else {
 		number_to_word(c);
 	}
-   
   }
   return 0;
  }
+
+
+
+
+
+
+
 
 	/*
 	if (c == '1')
